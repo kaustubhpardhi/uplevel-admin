@@ -1,0 +1,72 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 70%;
+  gap: 3rem;
+}
+.dashboard-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dashboard-nav-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Poppins;
+}
+.nav-date-value {
+  font-weight: 200;
+  font-size: small;
+}
+.dashboard-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+  font-family: Poppins;
+}
+.profile-img {
+  height: 80%;
+  width: 30%;
+  border-radius: 50%;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+.profile-role {
+  font-weight: 200;
+  font-size: small;
+}
+.dashboard-hero {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25%;
+  justify-content: space-between;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 1rem;
+  font-family: Poppins;
+}
+.metric-one {
+  background-color: lightcyan;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.metric-two {
+  background-color: #f5f5dc;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.metric-three {
+  background-color: #303234;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: white;
+}
