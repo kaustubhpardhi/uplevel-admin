@@ -34,7 +34,7 @@ function Navbar() {
           onClick={() => handleItemClick(2)}
         >
           <FaListAlt />
-          <p className="nav-item-title">Create Test</p>
+          <p className="nav-item-title">Upload Assignment</p>
         </div>
         <div
           className={`nav-item ${activeItem === 3 ? "active" : ""}`}

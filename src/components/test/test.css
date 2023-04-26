@@ -1,0 +1,135 @@
+.test {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 70%;
+  background-color: lavenderblush;
+  border-radius: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.test-header {
+  display: flex;
+  flex-direction: column;
+}
+.test-header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: Poppins;
+  font-size: larger;
+  font-weight: 600;
+  height: 50%;
+}
+.test-header-body {
+  display: flex;
+  flex-direction: row;
+  font-family: poppins;
+  font-weight: 200;
+  font-size: medium;
+}
+.test-form {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  gap: 2rem;
+  font-family: poppins;
+}
+.question-title {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 25%;
+  gap: 0.2rem;
+}
+.qtn-title {
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+  height: 70%;
+  border-radius: 1rem;
+}
+.opts-answer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 25%;
+}
+.domain-level {
+  display: flex;
+  flex-direction: row;
+  height: 25%;
+}
+.question-options {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.7rem;
+}
+.question-answer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4rem;
+}
+.question-domain {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4rem;
+}
+.question-level {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4rem;
+}
+.ans-in {
+  width: 50%;
+  height: 25%;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0px 1px #000;
+}
+.questions-drp {
+  width: 30%;
+  height: 25%;
+  font-family: poppins;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 2px 3px 0px 1px #000;
+}
+.add-options-btn {
+  width: 30%;
+  height: 25%;
+  font-family: poppins;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+.qtn-title:focus,
+.ans-in:focus,
+.questions-drp {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+.add-options-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px 0px #000;
+}
+.submit {
+  height: 10%;
+}
+
+.submit-btn {
+  font-family: poppins;
+  height: 80%;
+  width: 25%;
+  border-radius: 0.6rem;
+  font-size: medium;
+  font-weight: 600;
+  box-shadow: 3px 3px 0px 0px #000;
+  background-color: #f9a826;
+  color: white;
+}

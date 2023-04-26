@@ -30,12 +30,14 @@
   font-family: Poppins;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
   font-weight: 300;
   height: 3rem;
   width: 100%;
   box-sizing: border-box;
   padding-left: 15%;
+  text-align: left;
+  border-radius: 1.2rem;
 }
 .nav-item.active {
   background-color: #f9a826;
