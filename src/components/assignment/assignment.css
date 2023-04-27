@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.assignment {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 70%;
+  gap: 2rem;
+  background-color: #f5eaea;
+  border-radius: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.assignment-header {
+  display: flex;
+  flex-direction: column;
+}
+.assignment-header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: Poppins;
+  font-size: larger;
+  font-weight: 600;
+  height: 50%;
+}
+.upload {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  background-color: lavenderblush;
+  border-radius: 1rem;
+  font-family: poppins;
+  font-size: large;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.upload-ipt {
+  font-family: poppins;
+  text-align: center;
+}
+.assignment-form {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+  font-family: poppins;
+}
+.assignment-name {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  gap: 0.3rem;
+}
+.assignment-domain {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  gap: 0.5rem;
+}
+.assignment-level {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  gap: 0.5rem;
+}
+.assignment-drp {
+  width: 20%;
+  height: 35%;
+  font-family: poppins;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0px 1px #000;
+}
+.name-ipt {
+  width: 20%;
+  height: 30%;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0px 1px #000;
+}
+.assignment-button {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  justify-content: center;
+}
+.ass-btn {
+  width: 15%;
+  height: 60%;
+  border-radius: 0.6rem;
+  font-size: medium;
+  font-weight: 600;
+  box-shadow: 3px 3px 0px 0px #000;
+  background-color: #f9a826;
+  color: white;
+  font-family: poppins;
+}
+
+.name-ipt:focus,
+.assignment-drp {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+.ass-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px 0px #000;
+}

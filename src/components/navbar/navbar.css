@@ -19,9 +19,10 @@
   gap: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center; /* align items to the center */
   text-align: center;
+  height: 65%;
   width: 100%;
 }
 .nav-item {
@@ -42,4 +43,24 @@
 .nav-item.active {
   background-color: #f9a826;
   color: black;
+}
+Link {
+  border-style: none;
+}
+.navbar-logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logout-btn {
+  width: 60%;
+  height: 100%;
+  border-radius: 0.6rem;
+  font-size: medium;
+  font-weight: 500;
+  box-shadow: 3px 3px 0px 0px #000;
+  background-color: lightcyan;
+  color: black;
+  font-family: poppins;
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 30px;
   width: 70%;
-  background-color: lavenderblush;
+  background-color: #f5eaea;
   border-radius: 5%;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -55,11 +55,13 @@
   flex-direction: row;
   justify-content: space-between;
   height: 25%;
+  width: 60%;
 }
 .domain-level {
   display: flex;
   flex-direction: row;
   height: 25%;
+  width: 60%;
 }
 .question-options {
   display: flex;
@@ -102,7 +104,7 @@
   box-shadow: 2px 3px 0px 1px #000;
 }
 .add-options-btn {
-  width: 30%;
+  width: 40%;
   height: 25%;
   font-family: poppins;
   border-radius: 0.5rem;
@@ -125,7 +127,7 @@
 .submit-btn {
   font-family: poppins;
   height: 80%;
-  width: 25%;
+  width: 20%;
   border-radius: 0.6rem;
   font-size: medium;
   font-weight: 600;
