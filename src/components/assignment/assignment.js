@@ -1,8 +1,14 @@
 import "./assignment.css";
 import { FiUpload } from "react-icons/fi";
 import Navbar from "../navbar/navbar";
+import { useState } from "react";
 
 function Assignment() {
+  const [assignmentName, setAssignmentName] = useState("");
+  const [assignmentDomain, setAssignmentDomain] = useState("");
+  const [assignmentLevel, setAssignmentLevel] = useState("");
+  const handleFile = (event) => {};
+
   return (
     <div className="container">
       <Navbar />
@@ -18,7 +24,11 @@ function Assignment() {
         </div>
         <div className="upload">
           <p className="upload-title">Select or Drop the zip folder here</p>
-          <input type="file" className="upload-ipt"></input>
+          <input
+            type="file"
+            className="upload-ipt"
+            onChange={(event) => handleFile(event)}
+          ></input>
         </div>
         <div className="assignment-form">
           <div className="assignment-name">

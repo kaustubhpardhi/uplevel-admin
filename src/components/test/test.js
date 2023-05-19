@@ -18,7 +18,6 @@ function Test() {
     document.querySelector(".ans-in").value = "";
     setNumOptions(numOptions + 1);
   };
-
   const handleSubmit = () => {
     const errors = validateForm();
     if (errors.length > 0) {
@@ -35,7 +34,7 @@ function Test() {
     console.log(data);
 
     axios
-      .post("/api/questions", data)
+      .post("/api/questions/addquestion", data)
       .then((response) => {
         console.log("Success:", response);
       })
@@ -48,12 +47,12 @@ function Test() {
     if (!questionValue) {
       errors.push("Question title is required");
     }
-    if (!questionLevel) {
-      errors.push("Question level is required");
-    }
-    if (!domainName) {
-      errors.push("Question domain is required");
-    }
+    // if (!questionLevel) {
+    //   errors.push("Question level is required");
+    // }
+    // if (!domainName) {
+    //   errors.push("Question domain is required");
+    // }
     if (questionOptions.length < 2) {
       errors.push("At least two options are required");
     }
@@ -112,9 +111,9 @@ function Test() {
               <span className="form-label">Select Question Domain</span>
               <select
                 className="questions-drp"
-                value={domainName}
                 onChange={(e) => setDomainName(e.target.value)}
               >
+                <option value="choose">Choose</option>
                 <option value="apti">Aptitude</option>
                 <option value="backend">Backend</option>
               </select>
@@ -126,6 +125,7 @@ function Test() {
                 value={questionLevel}
                 onChange={(e) => setQuestionLevel(e.target.value)}
               >
+                <option value="easy">Choose</option>
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
