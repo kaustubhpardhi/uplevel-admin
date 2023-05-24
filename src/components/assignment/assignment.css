@@ -113,3 +113,13 @@
   transform: translateY(2px);
   box-shadow: 0px 0px 0px 0px #000;
 }
+.loading {
+  display: flex;
+  flex-direction: row;
+}
+.loading-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}

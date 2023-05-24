@@ -1,0 +1,10 @@
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.success-title {
+  color: #f9a826;
+  font-family: "Poppins";
+}
