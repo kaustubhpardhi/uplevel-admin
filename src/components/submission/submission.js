@@ -11,6 +11,8 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { useNavigate } from "react-router-dom";
+import { MdAssignment } from "react-icons/md";
+
 const columns = [
   { id: "name", label: "Name", minWidth: 170 },
   { id: "role", label: "Role", minWidth: 100 },
@@ -38,7 +40,7 @@ const columns = [
   {
     id: "badges",
     label: "Assign Badges",
-    minWidth: 170,
+    minWidth: 130,
     align: "right",
     format: (value) => value.toFixed(2),
   },
@@ -187,13 +189,13 @@ function Submission() {
                               }}
                             >
                               {column.id === "badges" ? (
-                                <button
-                                  variant="contained"
-                                  color="primary"
-                                  onClick={() => handleAssignBadges(row)}
-                                >
-                                  Assign Badges
-                                </button>
+                                <div className="badge-icon">
+                                  <MdAssignment
+                                    onClick={() => handleAssignBadges(row)}
+                                  >
+                                    Assign Badges
+                                  </MdAssignment>
+                                </div>
                               ) : column.format && typeof value === "number" ? (
                                 column.format(value)
                               ) : (
