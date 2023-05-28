@@ -1,0 +1,22 @@
+.container-submission {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.submission-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2%;
+  width: 80%;
+}
+.table-head {
+}
+.heading-cell {
+  background-color: aqua;
+}
+.submission-heading {
+  font-family: poppins;
+  font-weight: 500;
+  font-size: larger;
+}

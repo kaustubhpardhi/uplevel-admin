@@ -1,0 +1,54 @@
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  margin-top: 3%;
+}
+.badge-heading {
+  font-family: poppins;
+  font-size: x-large;
+  font-weight: 500;
+}
+.badge-para {
+  font-family: poppins;
+  font-size: large;
+  font-weight: 300;
+}
+.badge-dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  gap: 5%;
+}
+.label {
+  font-family: poppins;
+  font-weight: 200;
+}
+.badges-drp {
+  width: 50%;
+  height: 10%;
+  font-family: poppins;
+  font-weight: 400;
+  font-size: medium;
+}
+.add-badge {
+  width: 20%;
+  height: 10%;
+  font-family: poppins;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+.submit-badge {
+  height: 10%;
+}
+.submit-badge-btn {
+  width: 30%;
+  height: 50%;
+  border-radius: 0.6rem;
+  font-size: medium;
+  font-weight: 600;
+  box-shadow: 3px 3px 0px 0px #000;
+  background-color: #f9a826;
+  color: white;
+  font-family: poppins;
+}

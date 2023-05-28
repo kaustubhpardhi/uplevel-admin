@@ -61,7 +61,7 @@ function Navbar() {
         </div>
         <div
           className={`nav-item ${activeItem === 3 ? "active" : ""}`}
-          onClick={() => handleItemClick(3, "/submissions")}
+          onClick={() => handleItemClick(3, "/submission")}
         >
           <FaNewspaper />
           <p className="nav-item-title">Submissions</p>
