@@ -112,7 +112,7 @@ function Test() {
           <div className="opts-answer">
             <div className="question-options">
               <span className="form-label">Add Options</span>
-              <input type="text" className="ans-in"></input>
+              <input type="text" className="ans-in-op"></input>
               <button className="add-options-btn" onClick={handleAddOption}>
                 Add Option
               </button>

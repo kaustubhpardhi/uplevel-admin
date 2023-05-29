@@ -99,7 +99,9 @@ function Assignment() {
               className="assignment-drp"
               onChange={(e) => setAssignmentDomain(e.target.value)}
             >
-              <option value="apti">Aptitude</option>
+              <option value="choose">Choose</option>
+              <option value="aptitude">Aptitude</option>
+              <option value="frontend">Frontend</option>
               <option value="backend">Backend</option>
             </select>
           </div>
@@ -109,6 +111,7 @@ function Assignment() {
               className="assignment-drp"
               onChange={(e) => setAssignmentLevel(e.target.value)}
             >
+              <option value="choose">Choose</option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
