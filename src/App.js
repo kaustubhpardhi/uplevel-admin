@@ -7,6 +7,8 @@ import Assignment from "./components/assignment/assignment";
 import Success from "./components/success/success";
 import Submission from "./components/submission/submission";
 import Badge from "./components/badge/badge";
+import Register from "./components/auth/register";
+import Login from "./components/auth/login";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/success" element={<Success />} />
         <Route path="/submission" element={<Submission />} />
         <Route path="/badge" element={<Badge />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

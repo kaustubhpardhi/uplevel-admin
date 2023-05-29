@@ -6,7 +6,7 @@ const Success = () => {
     <div className="container">
       <Navbar />
       <div className="success">
-        <h2 className="success-title">Assignment Uploaded Successfully</h2>
+        <h2 className="success-title"> Added Successfully</h2>
       </div>
     </div>
   );
