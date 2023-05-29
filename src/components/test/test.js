@@ -3,7 +3,12 @@ import Navbar from "../navbar/navbar";
 import "./test.css";
 import { FaPen, FaCheckDouble } from "react-icons/fa";
 import axios from "axios";
+import Success from "../success/success";
+import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 function Test() {
+  const navigate = useNavigate();
   const [questionValue, setQuestionValue] = useState("");
   const [questionLevel, setQuestionLevel] = useState("");
   const [domainName, setDomainName] = useState("");
@@ -11,6 +16,7 @@ function Test() {
   const [questionAnswer, setQuestionAnswer] = useState("");
   const [numOptions, setNumOptions] = useState(0);
   const [errors, setErrors] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleAddOption = () => {
     const newOption = document.querySelector(".ans-in").value;
@@ -18,29 +24,37 @@ function Test() {
     document.querySelector(".ans-in").value = "";
     setNumOptions(numOptions + 1);
   };
-  const handleSubmit = () => {
-    const errors = validateForm();
-    if (errors.length > 0) {
-      setErrors(errors);
-      return;
-    }
-    const data = {
-      question: questionValue,
-      level: questionLevel,
-      domain: domainName,
-      options: questionOptions,
-      answer: questionAnswer,
-    };
-    console.log(data);
+  const handleSubmit = async () => {
+    try {
+      setLoading(true);
+      const errors = validateForm();
+      if (errors.length > 0) {
+        setErrors(errors);
+        return;
+      }
+      const data = {
+        question: questionValue,
+        level: questionLevel,
+        domain: domainName,
+        options: questionOptions,
+        answer: questionAnswer,
+      };
+      console.log(data);
 
-    axios
-      .post("/api/questions/addquestion", data)
-      .then((response) => {
-        console.log("Success:", response);
-      })
-      .catch((error) => {
-        console.error("Error", error);
-      });
+      await axios
+        .post("/api/questions/addquestion", data)
+        .then((response) => {
+          console.log("Success:", response);
+        })
+        .catch((error) => {
+          console.error("Error", error);
+        });
+      navigate("/success");
+    } catch (error) {
+      console.log(error);
+      alert("Form submission failed");
+    } finally {
+    }
   };
   const validateForm = () => {
     const errors = [];
@@ -62,6 +76,16 @@ function Test() {
     return errors;
   };
 
+  if (loading) {
+    return (
+      <div className="loading">
+        <Navbar />
+        <div className="loading-icon">
+          <CircularProgress className="loading-icon" />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="container">
       <Navbar />
@@ -115,6 +139,7 @@ function Test() {
               >
                 <option value="choose">Choose</option>
                 <option value="apti">Aptitude</option>
+                <option value="backend">Frontend</option>
                 <option value="backend">Backend</option>
               </select>
             </div>
