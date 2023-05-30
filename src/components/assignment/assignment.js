@@ -11,6 +11,7 @@ function Assignment() {
   const navigate = useNavigate();
   const [assignmentName, setAssignmentName] = useState("");
   const [assignmentDomain, setAssignmentDomain] = useState("");
+  const [assignmentDescription, setAssignmentDescription] = useState("");
   const [assignmentLevel, setAssignmentLevel] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -33,6 +34,7 @@ function Assignment() {
         level: assignmentLevel,
         domain: assignmentDomain,
         base64: base64,
+        desciption: assignmentDescription,
       };
       console.log(data);
 
@@ -91,6 +93,15 @@ function Assignment() {
               className="name-ipt"
               value={assignmentName}
               onChange={(e) => setAssignmentName(e.target.value)}
+            ></input>
+          </div>
+          <div className="assignment-name">
+            <span className="label">Assignment Description</span>
+            <input
+              type="text"
+              className="name-ipt"
+              value={assignmentDescription}
+              onChange={(e) => setAssignmentDescription(e.target.value)}
             ></input>
           </div>
           <div className="assignment-domain">
