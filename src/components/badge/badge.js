@@ -8,10 +8,9 @@ const Badge = () => {
   const [badges, setBadges] = useState([]);
   const [numOptions, setNumOptions] = useState(0);
 
-  console.log(badges);
   const { state } = useLocation();
   const rowDetails = state && state.rowDetails;
-  console.log(rowDetails);
+  const userId = rowDetails && rowDetails.id;
 
   const handleAddOption = () => {
     // Get the selected badge option from the dropdown
@@ -20,6 +19,27 @@ const Badge = () => {
     setBadges((prevBadges) => [...prevBadges, selectedBadge]);
     setNumOptions(numOptions + 1);
   };
+  const handleAssignBadges = async () => {
+    const submissionId = rowDetails && rowDetails.submissionId;
+
+    if (!userId || !submissionId || badges.length === 0) {
+      console.error("Invalid data for assigning badges");
+      return;
+    }
+
+    try {
+      const response = await axios.post("/api/badge/assign", {
+        userId,
+        badgeList: badges,
+        submissionId,
+      });
+      console.log(response.data);
+      // Redirect or display success message
+    } catch (error) {
+      console.error(error);
+      // Display error message
+    }
+  };
 
   return (
     <div className="container">
@@ -27,7 +47,7 @@ const Badge = () => {
       <div className="badge-container">
         <div className="badge-heading">
           <span className="badge-title">
-            Assign badges based on the performance 📍
+            Assign badges and Approve Skills based on the performance 📍
           </span>
         </div>
         <div className="badge-para">
@@ -39,10 +59,17 @@ const Badge = () => {
           <span className="label">Select Badges</span>
           <select id="badge-dropdown" className="badges-drp">
             <option value="choose">Choose</option>
-            <option value="fininja">Frontend Ninja</option>
-            <option value="bninja">Backend Ninja</option>
-            <option value="rdev">Rockstar Dev</option>
-            <option value="cc">Clean Coder</option>
+            <option value="Frontend Ninja">Frontend Ninja</option>
+            <option value="Backend Ninja">Backend Ninja</option>
+            <option value="Rockstar Dev">Rockstar Dev</option>
+            <option value="Clean Coder ">Clean Coder</option>
+            <option value="angular">Angular</option>
+            <option value="javascript">Javascript</option>
+            <option value="typescript">Typescript</option>
+            <option value="mysql">Mysql</option>
+            <option value="spring">Spring</option>
+            <option value="mongodb">Mongodb</option>
+            <option value="git">Git</option>
           </select>
           <button className="add-badge" onClick={handleAddOption}>
             Add Badge
@@ -50,7 +77,9 @@ const Badge = () => {
           <span>{numOptions} badges added</span>
         </div>
         <div className="submit-badge">
-          <button className="submit-badge-btn">Assign Badges</button>
+          <button className="submit-badge-btn" onClick={handleAssignBadges}>
+            Assign Badges
+          </button>
         </div>
       </div>
     </div>
