@@ -34,7 +34,7 @@ function Assignment() {
         level: assignmentLevel,
         domain: assignmentDomain,
         base64: base64,
-        desciption: assignmentDescription,
+        description: assignmentDescription,
       };
       console.log(data);
 
